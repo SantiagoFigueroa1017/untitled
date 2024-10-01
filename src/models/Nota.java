@@ -6,6 +6,7 @@ public class Nota {
     private double nota2;
     private double nota3;
     private double examen;
+    private double definitiva;
 
     public Nota(){
         this.nota1 = 0.0;
@@ -15,11 +16,12 @@ public class Nota {
         this.definitiva = 0.0;
     }
 
-    public Nota(double nota1, double nota2, double nota3, double examen) {
+    public Nota(double nota1, double nota2, double nota3, double examen, double definitiva) {
         this.nota1 = nota1;
         this.nota2 = nota2;
         this.nota3 = nota3;
         this.examen = examen;
+        this.definitiva = definitiva;
     }
 
     public double getNota1() {
@@ -54,6 +56,13 @@ public class Nota {
         this.examen = examen;
     }
 
+    public double getDefinitiva() {
+        return definitiva;
+    }
+
+    public void setDefinitiva(double definitiva) {
+        this.definitiva = definitiva;
+    }
 
     @Override
     public String toString() {
@@ -62,6 +71,7 @@ public class Nota {
                 ", nota2=" + nota2 +
                 ", nota3=" + nota3 +
                 ", examen=" + examen +
+                ", definitiva=" + definitiva +
                 '}';
     }
 }

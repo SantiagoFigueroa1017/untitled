@@ -29,7 +29,12 @@ public class NotaService {
         System.out.println("Ingrese nota del examen");
         double examen = sc.nextDouble();
 
-        Nota nota = new Nota(nota1, nota2, nota3,examen);
+        Nota nota = new Nota(nota1, nota2, nota3, examen, calcularDefinitiva(nota1, nota2, nota3, examen));
         return nota;
+    }
+
+    private double calcularDefinitiva(double nota1, double nota2, double nota3, double examen){
+        return (((nota1 + nota2 + nota3) / 3) * 0.7) + (examen * 0.3);
+
     }
 }
